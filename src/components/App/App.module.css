@@ -1,0 +1,33 @@
+.container {
+  max-width: 760px;
+  margin: 0px auto;
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  height: 100%;
+}
+
+.main-button {
+  background-color: #2196f3;
+  color: white;
+  height: 50px;
+  border-radius: 5px;
+  width: 100%;
+}
+.main-button:hover {
+  opacity: 0.7;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    margin: 10px 10px;
+  }
+  .main {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 576px) {
+}

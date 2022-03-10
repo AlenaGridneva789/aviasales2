@@ -1,0 +1,14 @@
+.header {
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 40px;
+}
+.img {
+  width: 100px;
+}
+@media screen and (max-width: 576px) {
+  .header {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+}

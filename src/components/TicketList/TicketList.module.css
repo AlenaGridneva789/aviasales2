@@ -1,0 +1,15 @@
+.ticketList {
+  display: flex;
+  flex-direction: column;
+  max-width: 502px;
+}
+@media screen and (max-width: 768px) {
+  .ticketList {
+    max-width: 760px;
+  }
+}
+@media screen and (max-width: 567px) {
+  .ticketList {
+    max-width: 576px;
+  }
+}
