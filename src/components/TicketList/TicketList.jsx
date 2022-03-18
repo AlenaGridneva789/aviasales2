@@ -46,8 +46,8 @@ const TicketList = () => {
     }
     return data
   }
-  const dataMap = (data, count) =>
-    data.slice(0, count).map((element) => ({
+  const dataMap = (data) =>
+    data.map((element) => ({
       price: element.price,
       carrier: element.carrier,
       departure: [element.segments[0].origin, element.segments[0].destination],
@@ -71,23 +71,22 @@ const TicketList = () => {
     })
   }
   let num = 1
-  const result = dataMap(dataSort(dataFilterCheckbox(tickets.data, checkboxes), activeFilter), ticketsCount).map(
-    (item) => (
-      <Ticket
-        key={num++}
-        price={item.price}
-        carrier={item.carrier}
-        departure={item.departure}
-        departureTransfers={item.departureTransfers}
-        arrival={item.arrival}
-        arrivalTransfers={item.arrivalTransfers}
-        departureTime={item.departureTime}
-        arrivalTime={item.arrivalTime}
-        departureDuration={item.departureDuration}
-        arrivalDuration={item.arrivalDuration}
-      />
-    )
-  )
-  return <div className={classes.ticketList}>{result}</div>
+
+  const result = dataMap(dataSort(dataFilterCheckbox(tickets.data, checkboxes), activeFilter)).map((item) => (
+    <Ticket
+      key={num++}
+      price={item.price}
+      carrier={item.carrier}
+      departure={item.departure}
+      departureTransfers={item.departureTransfers}
+      arrival={item.arrival}
+      arrivalTransfers={item.arrivalTransfers}
+      departureTime={item.departureTime}
+      arrivalTime={item.arrivalTime}
+      departureDuration={item.departureDuration}
+      arrivalDuration={item.arrivalDuration}
+    />
+  ))
+  return <div className={classes.ticketList}>{result.slice(0, ticketsCount)}</div>
 }
 export default TicketList

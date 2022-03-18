@@ -87,9 +87,9 @@ Ticket.propTypes = {
   departureTransfers: PropTypes.arrayOf(PropTypes.string),
   arrival: PropTypes.arrayOf(PropTypes.string),
   arrivalTransfers: PropTypes.arrayOf(PropTypes.string),
-  departureDuration: PropTypes.number,
-  arrivalDuration: PropTypes.Number,
   departureTime: PropTypes.string,
-  arrivalTime: PropTypes.number,
+  arrivalTime: PropTypes.string,
+  departureDuration: PropTypes.number,
+  arrivalDuration: PropTypes.number,
 }
 export default Ticket
