@@ -28,7 +28,7 @@ div.checkbox label:hover {
   letter-spacing: 0.5px;
 }
 @media screen and (max-width: 768px) {
-  div.checkbox-container {
+  .checkbox-container {
     display: flex;
     width: 100%;
     height: auto;
@@ -36,12 +36,12 @@ div.checkbox label:hover {
     padding: 5px;
     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.25));
   }
-  div.checkbox {
+  .checkbox {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
-  div.checkbox label {
+  .checkbox label {
     margin: 0;
   }
   .checkbox-title {
@@ -49,16 +49,16 @@ div.checkbox label:hover {
   }
 }
 @media screen and (max-width: 576px) {
-  div.checkbox-container {
+  .checkbox-container {
     width: 100%;
     height: auto;
     margin-bottom: 10px;
     padding: 10px;
   }
-  div.checkbox label {
+  .checkbox label {
     margin: 5px;
   }
-  div.checkbox {
+  .checkbox {
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
