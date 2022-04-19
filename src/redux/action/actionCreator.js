@@ -1,7 +1,7 @@
 import { FILTER_TICKETS, CHECKED, GET_ID, ERROR, GET_TICKETS, GET_MORE } from './action'
 
 export const getId = () => (dispatch) => {
-  fetch('https://front-test.beta.aviasales.ru/search').then((response) => {
+  fetch('https://aviasales-test-api.kata.academy/search').then((response) => {
     if (response.status >= 200 && response.status < 300) {
       response.json().then((data) => dispatch({ type: GET_ID, payload: data.searchId }))
     } else {
@@ -11,7 +11,7 @@ export const getId = () => (dispatch) => {
 }
 
 export const getTickets = (id) => (dispatch) => {
-  fetch(`https://front-test.beta.aviasales.ru/tickets?searchId=${id}`)
+  fetch(`https://aviasales-test-api.kata.academy/tickets?searchId=${id}`)
     .then((response) => {
       if (!response.ok) {
         dispatch(getTickets(id))
