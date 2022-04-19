@@ -1,1 +1,1 @@
-https://aviasale-opal.vercel.app/
+https://aviasales2-gilt.vercel.app/
