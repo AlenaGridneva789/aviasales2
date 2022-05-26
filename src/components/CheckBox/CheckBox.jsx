@@ -25,7 +25,7 @@ const CheckBox = () => {
   return (
     <section className={classes['checkbox-container']}>
       <div>
-        <span className={classes['checkbox-title']}>КОЛИЧЕСТВО ПЕРЕСАДОК</span>
+        <span className={classes['checkbox-title']}>КОЛИЧЕСТВО ЕРЕСАДОК</span>
       </div>
       <ul className={classes.checkbox}>{checkboxes}</ul>
     </section>
